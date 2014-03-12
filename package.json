@@ -9,6 +9,6 @@
 	"targetType": "library",
 	
 	"dependencies": {
-		"derelict-util" : "~master"
+		"derelict-util" : ">=1.0.0"
 	}
 }
