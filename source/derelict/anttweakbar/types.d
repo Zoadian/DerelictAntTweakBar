@@ -51,8 +51,7 @@ alias void function(ubyte, int, int) GLUTkeyboardfun;
 alias void function(int, int, int) GLUTspecialfun;
 
 alias ETwType = int;
-enum : ETwType
-{
+enum : ETwType {
     TW_TYPE_UNDEF    = 0,
     TW_TYPE_BOOL8    = 2,
     TW_TYPE_BOOL16   = 3,
@@ -77,8 +76,7 @@ enum : ETwType
 }
 
 alias ETwParamValueType = int;
-enum : ETwParamValueType
-{
+enum : ETwParamValueType {
     TW_PARAM_INT32   = 0,
     TW_PARAM_FLOAT   = 1,
     TW_PARAM_DOUBLE  = 2,
@@ -97,8 +95,7 @@ enum : ETwGraphAPI
 }
 
 alias ETwKeyModifier = int;
-enum : ETwKeyModifier
-{
+enum : ETwKeyModifier {
     TW_KMOD_NONE  = 0,
     TW_KMOD_SHIFT = 3,
     TW_KMOD_CTRL  = 192,
@@ -107,8 +104,7 @@ enum : ETwKeyModifier
 }
 
 alias EKeySpecial = int;
-enum : EKeySpecial
-{
+enum : EKeySpecial {
     TW_KEY_BACKSPACE = 8,
     TW_KEY_TAB       = 9,
     TW_KEY_CLEAR     = 12,
@@ -145,30 +141,26 @@ enum : EKeySpecial
 }
 
 alias ETwMouseAction = int;
-enum : ETwMouseAction
-{
+enum : ETwMouseAction {
     TW_MOUSE_RELEASED = 0,
     TW_MOUSE_PRESSED  = 1
 }
 
 alias ETwMouseButtonID = int;
-enum : ETwMouseButtonID
-{
+enum : ETwMouseButtonID {
     TW_MOUSE_LEFT   = 1,
     TW_MOUSE_MIDDLE = 2,
     TW_MOUSE_RIGHT  = 3
 }
 
 
-struct CTwEnumVal
-{
+struct CTwEnumVal {
     int Value;
     const(char)*Label;
 }
 
 
-struct CTwStructMember
-{
+struct CTwStructMember {
     const(char)*Name;
     TwType Type;
     size_t Offset;
