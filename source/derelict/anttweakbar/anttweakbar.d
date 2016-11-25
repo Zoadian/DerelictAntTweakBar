@@ -39,11 +39,12 @@ private
     import derelict.util.system;
 
     static if(Derelict_OS_Windows)
-		enum libNames = "AntTweakBar.dll";
-    //~ else static if(Derelict_OS_Mac)
-        //~ enum libNames = "libglfw.3.dylib";
-    //~ else static if(Derelict_OS_Posix)
-        //~ enum libNames = "libglfw3.so,libglfw.so.3,/usr/local/lib/libglfw3.so,/usr/local/lib/libglfw.so.3";
+		version(Win64) enum libNames = "AntTweakBar64.dll";
+		else enum libNames = "AntTweakBar.dll";
+    else static if(Derelict_OS_Mac)
+        enum libNames = "libAntTweakBar.dylib";
+    else static if(Derelict_OS_Posix)
+        enum libNames = "libAntTweakBar.so,libAntTweakBar.so,/usr/local/lib/libAntTweakBar.so,/usr/local/lib/libAntTweakBar.so";
     else
         static assert(0, "Need to implement AntTweakBar libNames for this operating system.");
 }
